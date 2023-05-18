@@ -1,6 +1,6 @@
 import Button from "./Button";
 import styles from "./App.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 
 function App() {
     const [counter, setValue] = useState(0);
@@ -10,16 +10,11 @@ function App() {
         setKeyword(e.target.value);
     }
     useEffect(() => {
-        console.log("tester");
-    }, []);
-    useEffect(() => {
         getConsoleLog("키워드 변경");
     }, [keyword]);
-
     useEffect(() => {
         getConsoleLog("카운터변경");
     }, [counter]);
-
     useEffect(() => {
         getConsoleLog("전체 변경");
     }, [keyword, counter]);
@@ -39,8 +34,10 @@ function App() {
     );
 }
 
+const MemoizedApp = memo(App);
+
 function getConsoleLog(msg) {
     console.log(msg);
 }
 
-export default App;
+export default MemoizedApp;
