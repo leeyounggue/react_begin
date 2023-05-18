@@ -34,6 +34,9 @@ function App() {
         <h1 className={styles.title}>Coder Change</h1>
         <span>{counter}</span>
         <Button text={"Continue"} onClicker={onClick} />
+
+        { showing ? <Hello /> : null }
+
         <button onClick={onClick2}>{ showing ? "Hide" : "Show" }</button>
     </div>
     );
@@ -43,6 +46,12 @@ const MemoizedApp = memo(App);
 
 function getConsoleLog(msg) {
     console.log(msg);
+}
+
+function Hello() {
+    return (
+        <h1>Checked</h1>
+    )
 }
 
 export default MemoizedApp;
