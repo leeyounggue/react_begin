@@ -1,6 +1,6 @@
 function Button( {text} ) {
     return (
-        <button>Button</button>
+        <button>{text}</button>
     )
 }
 export default Button;
