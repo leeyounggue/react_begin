@@ -11,6 +11,7 @@ function App() {
     }, []);
     return (
     <div>
+        <input type="text" placeholder="Search Keyword Here..." />
         <h1 className={styles.title}>Coder Change</h1>
         <span>{counter}</span>
         <Button text={"Continue"} onClicker={onClick} />
