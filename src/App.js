@@ -11,7 +11,7 @@ function App() {
                 setLoading(false);
             });
     }, []);
-    console.log(coins);
+
     return (
     <div>
         <h1>BTC Graph</h1>
@@ -19,6 +19,9 @@ function App() {
         <ul>
             {
             coins.map((coin, index) => {
+
+                console.log(coin);
+
                 <li key={index}>{coin.name} ({coin.symbol}) : {coin.quotes.USD.price} USD</li>
             })
             }
