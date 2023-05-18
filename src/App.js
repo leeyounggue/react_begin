@@ -9,7 +9,6 @@ function App() {
     useEffect(() => {
         console.log("tester");
     }, []);
-
     return (
     <div>
         <h1 className={styles.title}>Coder Change</h1>
