@@ -14,7 +14,7 @@ function App() {
 
     return (
     <div>
-        <h1>BTC Graph</h1>
+        <h1>BTC Graph {coins.length}</h1>
         { loading ? <strong>Loading...</strong> : null }
         <ul>
             {
