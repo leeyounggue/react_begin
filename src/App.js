@@ -20,6 +20,11 @@ function App() {
         }
     }, [keyword]);
 
+    useEffect(() => {
+        console.log(counter);
+    }, [counter]);
+
+
     return (
     <div>
         <input
