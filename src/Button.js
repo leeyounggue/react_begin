@@ -2,7 +2,10 @@ import PropTypes from "prop-types";
 
 function Button( {text} ) {
     return (
-        <button>{text}</button>
+        <button style={{
+            backgroundColor: "tomato",
+            color: "white"
+        }}>{text}</button>
     )
 }
 
