@@ -5,7 +5,9 @@ function App() {
     const [coins, setConins] = useState([]);
     const [myMoney, myMoneySet] = useState(0);
 
-    const onChange = myMoneySet((e) => e.target.value);
+    const onChange = (e) => myMoneySet((e) => e.target.value);
+
+
 
     useEffect(() => {
         fetch("https://api.coinpaprika.com/v1/tickers")
