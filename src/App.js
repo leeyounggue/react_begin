@@ -25,14 +25,23 @@ function App() {
     return (
         <div>
             <h1>Movie List</h1>
-            {loading ? <h1>Loading... </h1> :
-            <div>
-                {
-                    movies.map( (movie) => {
-                        <div key={movie.id}>{movie.title}</div>
-                    })
-                }
-            </div>}
+            {loading ? (
+                <h1>Loading... </h1>
+            ) : (
+                <div>
+                    {movies.map((movie) => (
+                        <div key={movie.id}>
+                            <h2>{movie.title}</h2>
+                            <p>{movie.summary}</p>
+                            <ul>
+                                {movie.genres.map((g) => (
+                                    <li key={g}>{g}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            )}
         </div>
     );
 }
