@@ -18,12 +18,10 @@ function App() {
         { loading ? <strong>Loading...</strong> : null }
         <ul>
             {
-            coins.map((coin, index) => {
+                coins.map( (item, index) => {
 
-                console.log(coin);
-
-                <li key={index}>{coin.name} ({coin.symbol}) : {coin.quotes.USD.price} USD</li>
-            })
+                    return <li key={index}>{item.name}</li>
+                } )
             }
         </ul>
     </div>
