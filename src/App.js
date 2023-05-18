@@ -14,15 +14,15 @@ function App() {
 
     return (
     <div>
-        <h1>BTC Graph {coins.length}</h1>
+        <h1>BTC Graph ({coins.length})</h1>
         { loading ? <strong>Loading...</strong> : null }
-        <ul>
+        <select>
             {
                 coins.map( (item, index) => {
-                    return <li key={index}>{item.name} ({item.symbol}) ${item.quotes.USD.price} USD</li>
+                    return <option key={index}>{item.name} ({item.symbol}) ${item.quotes.USD.price} USD</option>
                 } )
             }
-        </ul>
+        </select>
     </div>
     );
 }
