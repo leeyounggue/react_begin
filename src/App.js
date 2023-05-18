@@ -9,21 +9,20 @@ function App() {
     const onChange = (e) => {
         setKeyword(e.target.value);
     }
-
-    console.log('tt');
     useEffect(() => {
         console.log("tester");
     }, []);
     useEffect(() => {
-        if (keyword !== "") {
-            console.log("Search For", keyword);
-        }
+        getConsoleLog("키워드 변경");
     }, [keyword]);
 
     useEffect(() => {
-        console.log(counter);
+        getConsoleLog("카운터변경");
     }, [counter]);
 
+    useEffect(() => {
+        getConsoleLog("전체 변경");
+    }, [keyword, counter]);
 
     return (
     <div>
@@ -38,6 +37,10 @@ function App() {
         <Button text={"Continue"} onClicker={onClick} />
     </div>
     );
+}
+
+function getConsoleLog(msg) {
+    console.log(msg);
 }
 
 export default App;
