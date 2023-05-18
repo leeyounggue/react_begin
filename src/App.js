@@ -14,7 +14,7 @@ function App() {
         console.log("tester");
     }, []);
     useEffect(() => {
-        if (keyword !== "" && keyword.length > 5) {
+        if (keyword !== "") {
             console.log("Search For", keyword);
         }
     }, [keyword]);
