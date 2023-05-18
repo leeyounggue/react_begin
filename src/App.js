@@ -16,8 +16,10 @@ function App() {
 
 
     useEffect(() => {
-
+        getMovies();
     }, []);
+
+    console.log(movies);
 
     console.log(movies);
     return (
