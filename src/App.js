@@ -13,7 +13,10 @@ function App() {
     useEffect(() => {
         console.log("tester");
     }, []);
-    console.log("search Form", keyword);
+    useEffect(() => {
+        console.log("search Form", keyword);
+    }, [keyword]);
+
     return (
     <div>
         <input
