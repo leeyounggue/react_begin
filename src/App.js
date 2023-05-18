@@ -5,8 +5,7 @@ function App() {
     const [coins, setConins] = useState([]);
     const [myMoney, myMoneySet] = useState(0);
 
-    const onChange = (e) => myMoneySet((e) => e.target.value);
-
+    const onChange = (e) => myMoneySet((currnet) => e.target.value);
 
 
     useEffect(() => {
