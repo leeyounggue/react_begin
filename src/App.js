@@ -4,11 +4,12 @@ import { useState, useEffect } from "react";
 
 function App() {
     const [counter, setValue] = useState(0);
+    const [keyword, setKeyword] = useState("");
     const onClick = () => setValue((prev) => prev + 1);
     const onChange = (e) => {
         setKeyword(e.target.value);
     }
-    const [keyword, setKeyword] = useState("");
+
     console.log('tt');
     useEffect(() => {
         console.log("tester");
