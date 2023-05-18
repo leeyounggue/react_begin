@@ -14,19 +14,18 @@ function App() {
         setLoading(false);
     }
 
-
     useEffect(() => {
         getMovies();
     }, []);
 
     console.log(movies);
 
-    console.log(movies);
     return (
         <div>
             <h1>Movie List</h1>
-
-            {loading ? <h1>Loading... </h1> : null}
+            {
+                loading ? <h1>Loading... </h1> : null
+            }
         </div>
     );
 }
