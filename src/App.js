@@ -5,6 +5,10 @@ import { useState, useEffect, memo } from "react";
 function App() {
     const [counter, setValue] = useState(0);
     const [keyword, setKeyword] = useState("");
+
+    const [showing, setShowing] = useState(false);
+
+    const onClick2 = () => setShowing((current) => !current);
     const onClick = () => setValue((prev) => prev + 1);
     const onChange = (e) => {
         setKeyword(e.target.value);
@@ -30,6 +34,7 @@ function App() {
         <h1 className={styles.title}>Coder Change</h1>
         <span>{counter}</span>
         <Button text={"Continue"} onClicker={onClick} />
+        <Button onClick={onClick2}>{ showing ? "Hide" : "Show" }</Button>
     </div>
     );
 }
