@@ -4,9 +4,12 @@ function App() {
     const [loading, setLoading] = useState(true);
     const [coins, setConins] = useState([]);
     const [myMoney, myMoneySet] = useState(0);
+    const [buyAmount, setAmount] = useState(0);
 
     const onChange = (e) => myMoneySet((currnet) => e.target.value);
+    const onClick = () => {
 
+    };
 
     useEffect(() => {
         fetch("https://api.coinpaprika.com/v1/tickers")
@@ -29,7 +32,9 @@ function App() {
                 }
             </select>
         }
+        <div>{buyAmount}</div>
         <input type="text" value={myMoney} onChange={onChange} />
+        <button onClick={onClick}>Calc</button>
     </div>
     );
 }
