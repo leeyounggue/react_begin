@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 function App() {
     const [loading, setLoading] = useState(true);
     const [coins, setConins] = useState([]);
+    const [myMoney, myMoneySet] = useState(0);
+
+    const onChange = myMoneySet((e) => e.target.value);
+
     useEffect(() => {
         fetch("https://api.coinpaprika.com/v1/tickers")
             .then((response) => response.json())
@@ -24,7 +28,7 @@ function App() {
                 }
             </select>
         }
-
+        <input type="text" value={myMoney} onChange={onChange} />
     </div>
     );
 }
