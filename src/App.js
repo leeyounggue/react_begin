@@ -11,15 +11,17 @@ function App() {
                 setLoading(false);
             });
     }, []);
-
+    console.log(coins);
     return (
     <div>
         <h1>BTC Graph</h1>
         { loading ? <strong>Loading...</strong> : null }
         <ul>
-            { coins.map((coin, index) => {
+            {
+            coins.map((coin, index) => {
                 <li key={index}>{coin.name} ({coin.symbol}) : {coin.quotes.USD.price} USD</li>
-            }) }
+            })
+            }
         </ul>
     </div>
     );
