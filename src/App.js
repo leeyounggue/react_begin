@@ -4,7 +4,6 @@ import Home from "./routes/Home";
 import Detail from "./routes/Detail";
 
 function App() {
-    console.log(process);
     return (
         <Router>
             <Routes>
