@@ -14,6 +14,8 @@ function Detail() {
         getDetaiiData();
     }, []);
 
+    console.log(movieDetail);
+
     return <h1>Detail Page</h1>;
 }
 
