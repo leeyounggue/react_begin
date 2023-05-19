@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import style from "../Detail.module.css";
 
 function Detail() {
     const { id, ...rest } = useParams();
@@ -16,7 +17,16 @@ function Detail() {
 
     console.log(movieDetail);
 
-    return <h1>{movieDetail.title}</h1>;
+    return (
+        <h1
+            className={style.title}
+            style={{
+                backgroundImage: `url(${movieDetail.background_image})`,
+            }}
+        >
+            {movieDetail.title}
+        </h1>
+    );
 }
 
 export default Detail;
