@@ -7,7 +7,7 @@ function Detail() {
     const [movieDetail, setDetail] = useState([]);
     const getDetaiiData = async () => {
         const json = await (await fetch(detailAPiUrl)).json();
-        setDetail(json);
+        setDetail(json.data.movie);
     };
 
     useEffect(() => {
@@ -16,7 +16,7 @@ function Detail() {
 
     console.log(movieDetail);
 
-    return <h1>Detail Page</h1>;
+    return <h1>{movieDetail.title}</h1>;
 }
 
 export default Detail;
