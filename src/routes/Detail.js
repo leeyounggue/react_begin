@@ -11,7 +11,7 @@ function Detail() {
     };
 
     useEffect(() => {
-        getDetaiiData;
+        getDetaiiData();
     }, []);
 
     return <h1>Detail Page</h1>;
