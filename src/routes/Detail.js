@@ -3,7 +3,10 @@ import { useParams } from "react-router-dom";
 
 function Detail() {
     const { id, ...rest } = useParams();
-    console.log(id);
+    const detailAPiUrl = `https://yts.mx/api/v2/movie_details.json?movie_id=${id}`;
+
+    console.log(detailAPiUrl);
+
     return <h1>Detail Page</h1>;
 }
 
