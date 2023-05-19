@@ -25,7 +25,11 @@ function Detail() {
             }}
         >
             {movieDetail.title}
-            {console.log(movieDetail.genres)}
+            {movieDetail.genres
+                ? movieDetail.genres.map((genre) => (
+                      <li key={genre}>{genre}</li>
+                  ))
+                : null}
         </h1>
     );
 }
