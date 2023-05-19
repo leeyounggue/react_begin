@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.55c29f76.css","mappings":"AAAA,qBAGI,eAAiB,CACjB,cAAe,CAFf,iBAAkB,CADlB,UAIJ","sources":["Detail.module.css"],"sourcesContent":[".title {\r\n    width: 100%;\r\n    text-align: center;\r\n    font-weight: bold;\r\n    padding: 20px 0;\r\n}\r\n"],"names":[],"sourceRoot":""}
