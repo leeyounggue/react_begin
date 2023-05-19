@@ -8,19 +8,25 @@ function App() {
         // https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year
         const json = await (
             await fetch(
-                "https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year"
+                "https://yts.mx/api/v2/list_movies.json?minimum_rating=9.5&sort_by=year"
             )
         ).json();
 
         setMovies(json.data.movies);
         setLoading(false);
+
+        fetch("https://yts.mx/api/v2/list_movies.json?minimum_rating=9.5&sort_by=year")
+            .then( (resoponse) => resoponse.json() )
+            .then( (data) => {
+                setMovies(data.data.movies);
+                setLoading(false);
+            } );
+
     };
 
     useEffect(() => {
         getMovies();
     }, []);
-
-    console.log(movies);
 
     return (
         <div>
@@ -31,6 +37,10 @@ function App() {
                 <div>
                     {movies.map((movie) => (
                         <div key={movie.id}>
+                            <img
+                                src={movie.medium_cover_image}
+                                alt={movie.title}
+                            />
                             <h2>{movie.title}</h2>
                             <p>{movie.summary}</p>
                             <ul>
