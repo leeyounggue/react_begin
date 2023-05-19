@@ -26,9 +26,9 @@ function Detail() {
         >
             {movieDetail.title}
             <ul>
-                {movieDetail.genres.map((genres) => {
-                    <li>{genres}</li>;
-                })}
+                {movieDetail.genres.map((genre) => (
+                    <li key={genre}>{genre}</li>
+                ))}
             </ul>
         </h1>
     );
